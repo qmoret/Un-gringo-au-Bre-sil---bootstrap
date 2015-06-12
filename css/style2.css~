@@ -1,0 +1,142 @@
+
+html,body{
+	margin : 0px;
+	padding : 0px;
+	height : 100%;
+	font-family : 'Avenir';
+}
+
+header
+{
+	width:100%;
+	background:url("../img/bg-header.png"); height: 80px;
+	position:fixed; left : 0px;
+	top : 80px;
+}
+	
+.titre
+{
+	display : inline-block;
+	font-size : 25px; font-family : 'Rockwell';
+	text-decoration : none;
+	color : white;
+	position : relative ; top : 26px; left : 40px;
+}
+
+ul
+{
+	list-style-type : none
+}
+
+li a
+{
+	display : inline-block;
+	font-size : 18px; font-family : 'Rockwell';
+	text-decoration : none;
+	color : white;
+	float : right;
+	padding : 15px;
+	position : relative; bottom : 28px; right : 40px;
+}
+
+
+
+#copa
+{
+	padding : 0px;
+	background-image : url("../img/bg-copa-sunrise.jpg");
+	background-size : cover;
+	background-repeat : no-repeat;
+	background-attachment : fixed;
+	background-position : center;
+	margin-top : 0px;
+	height : 600px;
+}
+
+#copa h1
+{
+	text-align : center;
+	position : relative;
+	top : 240px;
+	color : white;
+	font-size : 50px;
+	font-weight: 100;
+
+}
+
+#streetart
+{
+		height : 380px;
+}
+
+#streetart h2
+{
+	display : inline-block;
+	vertical-align : top;
+	position : relative;
+	font-weight: 100;
+	top : 140px;
+	left : 50px;
+}
+
+#images1
+{
+	padding : 20px;
+	display : inline-block;
+	position : relative;
+	top : 25px;
+	float : right;
+	right : 45px;
+}
+
+
+#iguazu
+{
+	height : 800px;
+	background-image : url("../img/bg-iguazu.jpg");
+	background-size : cover;
+	background-repeat : no-repeat;
+	background-attachment : fixed;
+	background-position : center;
+	margin-top : 0px;
+}
+
+#ouropreto
+{
+	position : relative;
+	background-color: white;
+	top : -200px;
+	height : 200px;
+}
+
+#ouropreto h2
+{
+	display : inline-block;
+	font-size : 30px;
+	vertical-align : top;
+	position : relative;
+	font-weight: 100;
+	top : 140px;
+	left : 100px;
+}
+
+#images2
+{
+	padding : 20px;
+	display : inline-block;
+	position : relative;
+	top : 35px;
+	float : right;
+	right : 45px;
+}
+
+#sunset
+{
+	height : 800px;
+	background-image : url("../img/bg-sunset-ipanema.jpg");
+	background-size : cover;
+	background-repeat : no-repeat;
+	background-attachment : fixed;
+	background-position : center;
+	margin-top : 0px;
+}
