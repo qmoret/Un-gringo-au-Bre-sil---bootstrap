@@ -2,9 +2,9 @@
 html,body{
     height : 100%;
     min-height : 100%;
-	font-family :'Poiret One', 'sans-serif';
+	font-family :'Poiret One', 'Avenir','sans-serif';
 	letter-spacing:-0.04em;
-    font-size : 20px;
+    font-size : 14px;
     color :dimgrey;
 }
 
@@ -49,4 +49,9 @@ html,body{
 }
 .text{
     margin-bottom: 20px;
+}
+h5 {
+    font-size : 12px;
+    font-style : italic;
+    text-align : left;
 }
