@@ -15,3 +15,5 @@ var main = function () {
 $(document).ready(main);
 $(document).ready($('.carousel').carousel(
 ));
+
+

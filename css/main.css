@@ -13,7 +13,7 @@ html,body{
 	height : 100%;
 	background-size : cover;
 	background-repeat : no-repeat;
-	background-attachment : fixed;
+	background-attachment :fixed;
 	background-position : center;
 }
 
@@ -54,4 +54,23 @@ h5 {
     font-size : 12px;
     font-style : italic;
     text-align : left;
+}
+
+
+.ipa {
+    background-attachment:scroll;
+    position : relative;
+    top : -100px;
+}
+
+.slide {
+background-color : white;
+z-index: 1;
+top : -100px;
+}
+
+
+
+#streetart {
+    top : 0px;
 }
