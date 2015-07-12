@@ -6,15 +6,33 @@
         <!--CSS-->
         <link rel="stylesheet" href="css/bootstrap.css"/>
         <link rel="stylesheet" href="css/main.css"/>
-        <title>Un gringo au Brésil</title>
+        <title>Tudo bom</title>
         
         <!--Font-->
-        <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'> 
-    
+        <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> 
+        <link src='fonts/Porto.ttf' rel='stylesheet' type='text/css'>
+        
+        
         <!--media queries-->
         <meta name = "viewport"  content = "width=device-width, initial-scale=1.0, user-scalable=yes" />                
-        <script src="js/jquery-1.11.3.min.js"></script>
-        <script src="js/init.js"></script>
+        
+        <!--Google Maps API-->
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <script>
+            function initialize() {
+                var mapCanvas = document.getElementById('map-canvas');
+                var mapOptions = {
+                    center: new google.maps.LatLng(44.5403, -78.5463),
+                    zoom: 4,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    }
+                var map = new google.maps.Map(mapCanvas,mapOptions);
+            }
+            google.maps.event.addDomListener(window, 'load', initialize);
+            $('#map-canvas').on('shown',function(){
+                google.maps.event.trigger(map,'resize');
+            });
+        </script>
 
     
     </head>
@@ -23,31 +41,249 @@
 
     <body>
         
-        <!--Background copa-->
-        <div class="bg" data-parallax='{"y":200}' style='background : url("img/bg-copa-sunrise.jpg")' >
-            <div class="row" >
-                <div class="navbar navbar-default">
+        <!--Navbar-->
+        <div class=" navbar-default">
                     <div class="navbar-header">
-                        <a href="" class="navbar-brand">un gringo au Brésil</a>
+                        <img href="" class="menu" id="hamb" src="img/menu-hamburger.png" >
+                        <a href="" class="menu">Menu</a>
                     </div>                        
-                    <ul class="nav navbar-nav">
-                        <li><a href="#streetart">Street Art</a></li>
-                        <li><a href="#ouropreto">Ouro Preto</a></li>
-                        <li><a href="#">A propos</a></li>
-                    </ul>
-                </div>
+        </div>
+        
+        <!--First background : copa-->
+        <div class="bg premierbg" data-parallax='{"y":200}'>
+    
+            <!--Titre centré-->
+            <div class="container centr text-center">
+                <p>Portfolio de 6 mois au Brésil</p>
             </div>
             
             <!--Arrow down-->
-            <a class="arrowdown" href="#streetart" role="button">
+            <a id="arrowdown" href="#arrowdown" role="button">
                     <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
             </a>
+        
         </div>
         
+        
+
+        <!--Banner SP-->
+            <div class="carousel slide" id="sp" data-ride='carousel'>
+                    <!-- Indicators -->
+                          <ol class="carousel-indicators">
+                            <li data-target="#sp" data-slide-to="0" class="active"></li>
+                            <li data-target="#sp" data-slide-to="1"></li>
+                          </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+
+                            <!--Slide 1-->
+                                <div class="item active">
+                                    <div class="container">
+                                        <div class="row banniere">
+                                                <div class = "col-sm-3  text-center">
+                                                    <h5>30/06/15</h5>
+                                                    <h2>Sao Paulo</h2>
+                                                    <p>Ca y est, Rio c'est fini... Après une bonne dernière soirée d'au revoir, direction Sao Paulo pour deux jours pour voir les centraliens qui y font leur échange avant de décoller pour Manaus !</p>
+                                                </div>
+
+                                                <div class="images col-xs-7 col-sm-5">
+                                                            <img src="img/sp-se.jpg" alt="se" class="img-responsive"></a>
+                                                </div>
+
+                                                <div class= "images col-xs-5 col-sm-4">
+                                                        <img src="img/sp-cireur.jpg" alt="cireur" class="img-responsive"></a>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
 
 
-         <!--Banner streetart-->
+                            <!--Slide 2-->
+                                <div class="item">
+                                  <div class="container">
+                                        <div class="row banniere">
+
+                                            <div class="images col-xs-4">
+                                                    <img src="img/" alt="" class="img-responsive"></a>
+                                          </div>
+
+                                            <div class="images col-xs-4 ">
+                                                    <img src="img/.jpg" alt="" class="img-responsive"></a>
+                                            </div>
+
+                                            <div class= "images col-xs-4">
+                                                    <img src="img/.jpg" alt="" class="img-responsive"></a>
+                                             </div>
+                                        </div>
+                                    </div>
+                               </div>
+
+                            <!-- Controls -->
+                                <div>
+                                  <a class="left carousel-control" href="#sp" role="button" data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                  </a>
+                                  <a class="right carousel-control" href="#sp" role="button" data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                  </a>
+                                </div>
+
+                    </div>      
+            </div>
+        
+        <!--Background SP-->
+    	<div id="bgsp" class="bg" style="background-image:url('../img/bg-sp.jpg'); background-position : 0px 200px;"
+             >
+    	</div>
+
+
+
+        <!--Banner Chapada Diamantina-->
+        <div class="carousel slide" id="chapada" data-ride='carousel'>
+                        <!-- Indicators -->
+                              <ol class="carousel-indicators">
+                                <li data-target="#chapada" data-slide-to="0" class="active"></li>
+                                <li data-target="#chapada" data-slide-to="1"></li>
+                              </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+
+                                <!--Slide 1-->
+                                    <div class="item active">
+                                        <div class="container">
+                                            <div class="row banniere">
+                                                    <div class = "col-sm-3  text-center">
+                                                        <h5>02/06/15</h5>
+                                                        <h2>Chapada Diamantina</h2>
+                                                        <p>Suite de notre trip : le Parque Nacional de la Chapada Diamantina. Premier jour : tour en voiture pour aller au meilleur point de vue du parc, et le lendemain c'est la que ça devient rigolo : nous voila parti pour 3 jours de trek itinérant avec un guide local, Lucas.</p>
+                                                    </div>
+
+                                                    <div class="images col-sm-5">
+                                                                <img src="img/cd-paiinacio.jpg" alt="paiinacio" class="img-responsive"></a>
+                                                    </div>
+
+                                                    <div class= "images col-sm-4">
+                                                            <img src="img/cd-mexe.jpg" alt="mexe" class="img-responsive"></a>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                <!--Slide 2-->
+                                    <div class="item">
+                                      <div class="container">
+                                            <div class="row banniere">
+
+                                                <div class="images col-xs-4">
+                                                        <img src="img/" alt="" class="img-responsive"></a>
+                                              </div>
+
+                                                <div class="images col-xs-4 ">
+                                                        <img src="img/.jpg" alt="" class="img-responsive"></a>
+                                                </div>
+
+                                                <div class= "images col-xs-4">
+                                                        <img src="img/.jpg" alt="" class="img-responsive"></a>
+                                                 </div>
+                                            </div>
+                                        </div>
+                                   </div>
+
+                                <!-- Controls -->
+                                    <div>
+                                      <a class="left carousel-control" href="#chapada" role="button" data-slide="prev">
+                                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                      </a>
+                                      <a class="right carousel-control" href="#chapada" role="button" data-slide="next">
+                                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                      </a>
+                                    </div>
+
+                        </div>      
+                </div>
+
+
+
+        <!--Background Chapada-->
+    	<div class="bg" style="background-image:url('img/bg-cd.jpg');  " 
+             data-parallax='{"y":200}'>
+    	</div>
+
+        
+
+        <!--Banner Salvador & Praia do Forte-->
+        <div class="carousel slide" id="salvador" data-ride='carousel'>
+                        <!-- Indicators -->
+                              <ol class="carousel-indicators">
+                                <li data-target="#salvador" data-slide-to="0" class="active"></li>
+                                <li data-target="#salvador" data-slide-to="1"></li>
+                              </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+
+                                <!--Slide 1-->
+                                    <div class="item active">
+                                        <div class="container">
+                                            <div class="row banniere">
+                                                    <div class = "col-sm-3  text-center">
+                                                        <h5>30/05/15</h5>
+                                                        <h2>Salvador</h2>
+                                                        <p>C'est reparti en voyage, avec les 3 collocs ! Arrivée de nuit dans le centre historique: c'est carrément gettho, vide, et flippant. Le lendemain matin changement de décor : on se fait réveiller par les batucadas du groupe Olodum - groupe avec lequel Michael Jackson a tourné son clip de "They don't really care about us"</p>
+                                                    </div>
+
+                                                    <div class="images col-xs-7 col-sm-5">
+                                                                <img src="img/ssa-groupe.jpg" alt="group" class="img-responsive"></a>
+                                                    </div>
+
+                                                    <div class= "images col-xs-5 col-sm-4">
+                                                            <img src="img/ssa-olodum.jpg" alt="olodum" class="img-responsive"></a>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                <!--Slide 2-->
+                                    <div class="item">
+                                      <div id="map-canvas">
+                                            
+                                        </div>
+                                   </div>
+
+                                <!-- Controls -->
+                                    <div>
+                                      <a class="left carousel-control" href="#salvador" role="button" data-slide="prev">
+                                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                      </a>
+                                      <a class="right carousel-control" href="#salvador" role="button" data-slide="next">
+                                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                      </a>
+                                    </div>
+
+                        </div>      
+                </div> 
+
+
+
+        <!--Background Chapada-->
+    	<div class="bg" style="background-image:url('img/bg-ssa.jpg');  " 
+             data-parallax='{"y":200}'>
+    	</div>
+
+
+
+        <!--Banner streetart-->
         <div class="carousel slide" id="streetart" data-ride='carousel' style='background-color:white;'>
             <!-- Indicators -->
                   <ol class="carousel-indicators">
@@ -109,6 +345,7 @@
     	<div class="bg ipa" style="background-image:url('img/bg-iguazu.jpg');  " 
              data-parallax='{"y":200,"smoothness":0}'>
     	</div>
+
 
 
         <!-- Banner Ouro Preto-->
@@ -222,8 +459,10 @@
         </div>
     	
 
+
         <!--Background BH-->
         <div class="bg" style="background-image : url('img/bg-bh.jpg');" ></div>
+
 
 
         <!--Banner BH-->
@@ -292,6 +531,7 @@
 
                     </div>      
             </div>
+
 
 
          <!--Background ipanema sunset-->
@@ -377,10 +617,10 @@
 
 
         <!--JavaScript-->
+        <script src="js/jquery-1.11.3.min.js"></script>
         <script src="js/jquery.scrollTo.min.js"></script>
-        <script src="js/jquery.flexslider-min.js"></script>
         <script src="js/bootstrap.js"></script>
-        <script src="js/jquery.parallax-scroll.js"></script>
+        <!--<script src="js/jquery.parallax-scroll.js"></script>
         <!--<script src="js/skrollr.js"></script>
         <script src="js/scroll_main.js"></script>-->
         <script src="js/app.js"></script>

@@ -1,23 +1,24 @@
 
 html,body{
-    height : 100%;
-    min-height : 100%;
-	font-family :'Poiret One', 'Avenir','sans-serif';
+    min-height: 100%;
+    height: 100%;
+	font-family :'Lato', 'Avenir','sans-serif';
 	letter-spacing:-0.04em;
     font-size : 16px;
     color :dimgrey;
 }
 
 .bg {
+    background-position : 0px 100px;
     min-height : 100%;
 	height : 100%;
 	background-size : cover;
 	background-repeat : no-repeat;
 	background-attachment :fixed;
-	background-position : center;
     -webkit-background-size : cover;
     -moz-background-size : cover;
     -o-background-size : cover;
+    position : relative;
 }
 
 
@@ -26,9 +27,12 @@ html,body{
 }
 
 
-.navbar-brand {
-    font-size : 30px;
-    margin-right : 50px;
+.menu {
+    position :relative;
+    top : 8px;
+    font-size : 18px;
+    margin-left: 20px;
+    color: white;
 }
 
 .banniere {
@@ -38,7 +42,7 @@ html,body{
 .banniere .text{
     margin-bottom: 30px;
 }
-.arrowdown {
+#arrowdown {
     position : absolute;
     left : 50%;
     bottom : 2%;
@@ -60,20 +64,67 @@ h5 {
 }
 
 
-.ipa {
+.bg {
+    /*----Pour script parralax-----
     background-attachment:scroll;
     position : relative;
-    top : -100px;
+    top : -100px;*/
 }
 
 .slide {
 background-color : white;
 z-index: 1;
-top : -200px;
+top : 0px;
 }
 
 
 
 #streetart {
     top : 0px;
+}
+
+#hamb {
+    margin-left : 0px;
+    position : relative;
+    left: 10px;
+    top : 5px;
+    height : 28px;
+}
+
+
+
+.centr {
+    font-family: 'Porto','Lato';
+    position :relative ;
+    top : 40%;
+    width : 400px;
+    margin-right : auto;
+    margin-left : auto;
+    font-size: 45px;
+    color : white;   
+}
+
+.premierbg {
+    background :url("../img/bg-copa-sunrise.jpg");
+    background-attachment: fixed;
+}
+
+
+#map-canvas {
+    height : 400px;
+    width : 600px;
+    margin-left : 300px
+}
+
+#map-canvas img{
+    max-width : none;    
+}
+
+#map-canvas label {
+    width : auto;
+    display : inline;
+} 
+
+.bgsp {
+    background-image:url('../img/bg-sp.jpg')
 }
