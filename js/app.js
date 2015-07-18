@@ -16,19 +16,18 @@ $(document).ready(main);
 $(document).ready($('.carousel').carousel(
 ));
 
+var height = $(window).height()
 
 document.onscroll=function(){
-    //var height = $(window).height()
-bg=document.getElementById("bgsp");
+var el = document.getElementById("");
+var entryinviewport = el.offsetTop - height;
+var exitviewport = entryinviewport+2*height;
 var scroll = window.pageYOffset;
-var off = bg.offsetTop;
-var entryinviewport = bg.offsetTop - $(window).height();
-var exitviewport = entryinviewport+2*$(window).height();
 if (scroll >=  entryinviewport && scroll<= exitviewport) {
-    var y = parseInt(bg.style.backgroundPositionY);
+    var y = parseInt(el.style.backgroundPositionY);
     var adefile = scroll - entryinviewport;
-    var num = (y-adefile)*0.1+'px'
+    var num =(y-adefile)*0.1+'px'
     //$("#bgsp").animate({'background-position-y' : num });
-    bg.style.backgroundPositionY = num
+    el.style.backgroundPositionY = num
 }
 }
